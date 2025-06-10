@@ -14,13 +14,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 //componetes
 import { PublicarOfertaComponent } from './publicar-oferta/publicar-oferta.component';
 import { LoginComponent } from './login/login.component';
 
 //servicios
-import { AuthService } from './services/auth.service'; 
+import { AuthService } from './services/auth.service';
+import { NavComponent } from './nav/nav.component'; 
 
 
 
@@ -31,6 +34,7 @@ import { AuthService } from './services/auth.service';
     AppComponent,
     LoginComponent,
     PublicarOfertaComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,10 @@ import { AuthService } from './services/auth.service';
     MatCardModule,
     MatCheckboxModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    MatToolbarModule
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
