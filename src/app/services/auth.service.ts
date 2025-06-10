@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  login(credentials: { email: string, password: string }): Observable<string> {
+  login(credentials: { email: string, password: string}): Observable<string> {
 
     const encodedCredentials = btoa(`${credentials.email}:${credentials.password}`);
 
